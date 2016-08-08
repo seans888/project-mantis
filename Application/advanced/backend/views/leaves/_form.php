@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Leaves */
+/* @var $model common\models\Leaves */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\DepartmentSearch */
+/* @var $model common\models\DepartmentSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -17,9 +17,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Dep_id') ?>
 
-    <?= $form->field($model, 'Dep_name') ?>
+    <?= $form->field($model, 'Department_Name') ?>
 
-    <?= $form->field($model, 'Dep_description') ?>
+    <?= $form->field($model, 'Description') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

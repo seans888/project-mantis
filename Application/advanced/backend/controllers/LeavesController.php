@@ -3,8 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Leaves;
-use backend\models\LeaveSearch;
+use common\models\Leaves;
+use common\models\LeavesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,7 +35,7 @@ class LeavesController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new LeaveSearch();
+        $searchModel = new LeavesSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [

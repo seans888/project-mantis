@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Department */
+/* @var $model common\models\Department */
 
 $this->title = 'Update Department: ' . $model->Dep_id;
 $this->params['breadcrumbs'][] = ['label' => 'Departments', 'url' => ['index']];
