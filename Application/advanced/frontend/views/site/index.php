@@ -7,18 +7,15 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>WELCOME TO MANTIS HRMS</h1>
-
-        <p class="lead">GG SA SYSADD</p>
-
-      
-    <div class="body-content">
-
-      
-
-                
-            </div>
-        </div>
-
+<style>
+body  {
+    background-color: #000000;
+}
+</style>
+<body>
+        <h1><font face = "archivo narrow" color="green">
+        MANTIS HRIS</font></h1>
+</body>
     </div>
 </div>
+

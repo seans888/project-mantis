@@ -8,9 +8,15 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Signup';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title;
 ?>
+<style>
+body  {
+    background-color: #000000;
+}
+</style>
 <div class="site-signup">
+<font face = "archivo narrow" color="white">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>Please fill out the following fields to signup:</p>
@@ -28,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="form-group">
                     <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
                 </div>
-
+</font>
             <?php ActiveForm::end(); ?>
         </div>
     </div>
