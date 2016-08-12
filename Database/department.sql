@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2016 at 07:46 PM
+-- Generation Time: Aug 12, 2016 at 06:31 PM
 -- Server version: 10.1.8-MariaDB
 -- PHP Version: 5.6.14
 
@@ -28,16 +28,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `department` (
   `Dep_id` int(11) NOT NULL,
-  `Dep_name` varchar(100) NOT NULL,
-  `Dep_description` varchar(150) NOT NULL
+  `Department_Name` varchar(100) NOT NULL,
+  `Description` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `department`
 --
 
-INSERT INTO `department` (`Dep_id`, `Dep_name`, `Dep_description`) VALUES
-(122, 'IT ', 'Geeks');
+INSERT INTO `department` (`Dep_id`, `Department_Name`, `Description`) VALUES
+(4, 'Logistics ', 'BLAHLAHAH'),
+(5, 'AHAAHHAAH', 'HAHAHHA'),
+(7, 'Registry', 'nskasndksajd'),
+(123, 'IT Department', 'Incharged with establishing, monitoring and maintaining information technology systems and services. '),
+(124, 'Fire Department ', 'Organization that provides predominantly emergency firefighting and rescue services'),
+(222, 'JERI store', 'jdnskjn'),
+(1234, 'hahah', 'affafsfas');
 
 --
 -- Indexes for dumped tables
