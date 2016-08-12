@@ -8,9 +8,15 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Login';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title;
 ?>
 <div class="site-login">
+<style>
+body  {
+    background-color: #000000;
+}
+</style>
+<font face = "archivo narrow" color="white">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>Please fill out the following fields to login:</p>
@@ -28,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="form-group">
                     <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
                 </div>
-
+</font>
             <?php ActiveForm::end(); ?>
         </div>
     </div>

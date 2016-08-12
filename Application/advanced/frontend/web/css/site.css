@@ -2,7 +2,6 @@ html,
 body {
     height: 100%;
 }
-
 .wrap {
     min-height: 100%;
     height: auto;
@@ -11,7 +10,7 @@ body {
 }
 
 .wrap > .container {
-    padding: 70px 15px 20px;
+    padding: 100px 15px 20px;
 }
 
 .footer {
@@ -79,6 +78,7 @@ a.desc:after {
 .grid-view .filters input,
 .grid-view .filters select {
     min-width: 50px;
+    
 }
 
 .hint-block {
@@ -94,7 +94,7 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
-
+.nav
 /* align the logout "link" (button in form) of the navbar */
 .nav > li > form {
     padding: 8px;
@@ -109,3 +109,4 @@ a.desc:after {
 .nav > li > form > button:hover {
     text-decoration: none;
 }
+

@@ -9,8 +9,14 @@ use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
 $this->title = 'Contact';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title;
 ?>
+<style>
+body  {
+    background-color: #000000;
+}
+</style>
+<font face ="archivo narrow" color="white">
 <div class="site-contact">
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -33,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                     'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
                 ]) ?>
-
+</font>
                 <div class="form-group">
                     <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                 </div>
