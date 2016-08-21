@@ -38,3 +38,4 @@
         "post-install-cmd": "php init --env=Development --overwrite=n"
     }
 }
+
