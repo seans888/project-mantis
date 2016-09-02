@@ -5,7 +5,7 @@ use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\AdminLoginForm;
+use common\models\LoginForm;
 use backend\models\SignupForm;
 
 /**
@@ -21,11 +21,11 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
+                 'only' => ['logout', 'signup'],
                 'rules' => [
                     [
                         'actions' => ['login', 'error'],
-                        'actions' => ['signup'],
+                          'actions' => ['signup'],
                         'allow' => true,
                     ],
                     [
@@ -97,7 +97,7 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        $model = new AdminLoginForm('');
+        $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {

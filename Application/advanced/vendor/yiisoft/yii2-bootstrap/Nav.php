@@ -4,10 +4,13 @@
  * @copyright Copyright (c) 2008 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
+
 namespace yii\bootstrap;
+
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
+
 /**
  * Nav renders a nav HTML component.
  *
@@ -99,14 +102,11 @@ class Nav extends Widget
     /**
      * @var string this property allows you to customize the HTML which is used to generate the drop down caret symbol,
      * which is displayed next to the button text to indicate the drop down functionality.
-     * Defaults to `null` which means `<span class="caret"></span>` will be used. To disable the caret, set this property to be an empty string.
+     * Defaults to `null` which means `<b class="caret"></b>` will be used. To disable the caret, set this property to be an empty string.
      */
     public $dropDownCaret;
-    /**
-     * @var string name of a class to use for rendering dropdowns withing this widget. Defaults to [[Dropdown]].
-     * @since 2.0.7
-     */
-    public $dropdownClass = 'yii\bootstrap\Dropdown';
+
+
     /**
      * Initializes the widget.
      */
@@ -120,10 +120,11 @@ class Nav extends Widget
             $this->params = Yii::$app->request->getQueryParams();
         }
         if ($this->dropDownCaret === null) {
-            $this->dropDownCaret = '<span class="caret"></span>';
+            $this->dropDownCaret = Html::tag('b', '', ['class' => 'caret']);
         }
         Html::addCssClass($this->options, ['widget' => 'nav']);
     }
+
     /**
      * Renders the widget.
      */
@@ -132,6 +133,7 @@ class Nav extends Widget
         BootstrapAsset::register($this->getView());
         return $this->renderItems();
     }
+
     /**
      * Renders widget items.
      */
@@ -144,8 +146,10 @@ class Nav extends Widget
             }
             $items[] = $this->renderItem($item);
         }
+
         return Html::tag('ul', implode("\n", $items), $this->options);
     }
+
     /**
      * Renders a widget's item.
      * @param string|array $item the item to render.
@@ -166,11 +170,13 @@ class Nav extends Widget
         $items = ArrayHelper::getValue($item, 'items');
         $url = ArrayHelper::getValue($item, 'url', '#');
         $linkOptions = ArrayHelper::getValue($item, 'linkOptions', []);
+
         if (isset($item['active'])) {
             $active = ArrayHelper::remove($item, 'active', false);
         } else {
             $active = $this->isItemActive($item);
         }
+
         if (empty($items)) {
             $items = '';
         } else {
@@ -187,11 +193,14 @@ class Nav extends Widget
                 $items = $this->renderDropdown($items, $item);
             }
         }
+
         if ($this->activateItems && $active) {
             Html::addCssClass($options, 'active');
         }
+
         return Html::tag('li', Html::a($label, $url, $linkOptions) . $items, $options);
     }
+
     /**
      * Renders the given items as a dropdown.
      * This method is called to create sub-menus.
@@ -202,9 +211,7 @@ class Nav extends Widget
      */
     protected function renderDropdown($items, $parentItem)
     {
-        /** @var Widget $dropdownClass */
-        $dropdownClass = $this->dropdownClass;
-        return $dropdownClass::widget([
+        return Dropdown::widget([
             'options' => ArrayHelper::getValue($parentItem, 'dropDownOptions', []),
             'items' => $items,
             'encodeLabels' => $this->encodeLabels,
@@ -212,6 +219,7 @@ class Nav extends Widget
             'view' => $this->getView(),
         ]);
     }
+
     /**
      * Check to see if a child item is active optionally activating the parent.
      * @param array $items @see items
@@ -230,6 +238,7 @@ class Nav extends Widget
         }
         return $items;
     }
+
     /**
      * Checks whether a menu item is active.
      * This is done by checking if [[route]] and [[params]] match that specified in the `url` option of the menu item.
@@ -260,8 +269,10 @@ class Nav extends Widget
                     }
                 }
             }
+
             return true;
         }
+
         return false;
     }
 }
