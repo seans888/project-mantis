@@ -7,9 +7,9 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>WELCOME TO MANTIS HRMS</h1>
+        <h1>WELCOME TO MANTIS HRIS</h1>
 
-        <p class="lead">GG SA SYSADD</p>
+        <p class="lead">Human Resource Software</p>
 
       
     <div class="body-content">
